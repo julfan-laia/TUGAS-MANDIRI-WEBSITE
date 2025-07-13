@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pilih Kelas Kursus</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <div class="bg-white p-6 rounded shadow w-full max-w-md text-center">
+    <h1 class="text-2xl font-bold mb-4">Pilih Kelas Kursus</h1>
+    <p id="namaKursus" class="mb-6 text-lg"></p>
+
+    <div id="pilihanKelas" class="space-y-4">
+      <!-- Tombol kelas akan ditampilkan otomatis -->
+    </div>
+  </div>
+
+  <script>
+    const kursusKelas = {
+      inggris: { nama: "Bahasa Inggris", kelas: ["Pagi", "Malam"] },
+      jepang: { nama: "Bahasa Jepang", kelas: ["Pagi", "Malam"] },
+      mandarin: { nama: "Bahasa Mandarin", kelas: ["Pagi"] },
+      korea: { nama: "Bahasa Korea", kelas: ["Malam"] },
+      indonesia: { nama: "Bahasa Indonesia", kelas: ["Pagi"] },
+      spanyol: { nama: "Bahasa Spanyol", kelas: ["Malam"] },
+      prancis: { nama: "Bahasa Prancis", kelas: ["Pagi", "Malam"] },
+      komputer: { nama: "Kursus Komputer", kelas: ["Pagi", "Malam"] },
+      memasak: { nama: "Kursus Memasak", kelas: ["Malam"] }
+    };
+
+    window.onload = function() {
+      const params = new URLSearchParams(window.location.search);
+      const kursus = params.get("kursus");
+
+      if (kursus && kursusKelas[kursus]) {
+        document.getElementById("namaKursus").textContent = "Kursus: " + kursusKelas[kursus].nama;
+
+        const pilihanKelas = document.getElementById("pilihanKelas");
+        kursusKelas[kursus].kelas.forEach(kls => {
+          const btn = document.createElement("button");
+          btn.textContent = "Pilih Kelas " + kls;
+          btn.className = "w-full bg-blue-700 text-white py-2 rounded hover:bg-blue-800 transition";
+          btn.onclick = () => {
+            window.location.href = `pembayaran.html?kursus=${kursus}&kelas=${kls.toLowerCase()}`;
+          };
+          pilihanKelas.appendChild(btn);
+        });
+      } else {
+        document.getElementById("namaKursus").textContent = "Kursus tidak ditemukan.";
+      }
+    };
+  </script>
+
+</body>
+</html>
