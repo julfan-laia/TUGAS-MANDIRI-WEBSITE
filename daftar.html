@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>julfanKursus Online - Daftar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 flex flex-col min-h-screen">
+
+  <!-- Header dengan gambar dan judul -->
+  <div class="relative bg-blue-700 flex flex-col items-center justify-center p-8">
+    <h1 class="text-white text-3xl font-bold mb-4 text-center">julfanKursus Online</h1>
+    <img src="beranda.png" alt="Belajar Online" class="w-80 rounded shadow-lg border-4 border-white">
+  </div>
+
+  <!-- Form Daftar -->
+  <div class="flex-grow flex items-center justify-center p-4 bg-gray-100">
+    <div class="bg-white p-6 rounded-xl shadow-lg w-full max-w-sm">
+      <h2 class="text-center text-2xl font-semibold mb-4 text-blue-700">Daftar Akun</h2>
+      <form action="proses_daftar.php" method="POST" class="space-y-4">
+        <div>
+          <label for="nama" class="block text-sm font-medium text-gray-700">Nama Lengkap</label>
+          <input type="text" id="nama" name="nama" required class="mt-1 w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+          <input type="email" id="email" name="email" required class="mt-1 w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+          <label for="password" class="block text-sm font-medium text-gray-700">Kata Sandi</label>
+          <input type="password" id="password" name="password" required class="mt-1 w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+          <label for="kursus" class="block text-sm font-medium text-gray-700">Kursus yang Dipilih</label>
+          <select id="kursus" name="kursus" required class="mt-1 w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="">Pilih Kursus</option>
+            <option value="Bahasa Inggris">Bahasa Inggris</option>
+            <option value="Bahasa Jepang">Bahasa Jepang</option>
+            <option value="Bahasa Mandarin">Bahasa Mandarin</option>
+            <option value="Bahasa Korea">Bahasa Korea</option>
+            <option value="Bahasa Indonesia">Bahasa Indonesia</option>
+            <option value="Bahasa Spanyol">Bahasa Spanyol</option>
+            <option value="Bahasa Prancis">Bahasa Prancis</option>
+            <option value="Kursus Komputer">Kursus Komputer</option>
+            <option value="Kursus Memasak">Kursus Memasak</option>
+          </select>
+        </div>
+        <button type="submit" class="w-full bg-blue-700 text-white py-2 rounded hover:bg-blue-800 transition">Daftar</button>
+      </form>
+      <div class="text-center text-sm text-blue-700 mt-4">
+        Sudah punya akun? <a href="login.html" class="hover:underline">Login di sini</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center text-white py-4 bg-blue-700">
+    &copy; 2025 julfanKursus Online
+  </footer>
+
+</body>
+</html>
