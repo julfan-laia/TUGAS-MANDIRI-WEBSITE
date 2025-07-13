@@ -1,0 +1,500 @@
+ <!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Julfan Kursus Online</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-blue-700 text-white py-6 shadow-md">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-4">
+      <div class="flex items-center space-x-3">
+        <img src="logo.png" alt="Logo" class="w-10 h-10" onerror="this.style.display='none'">
+        <h1 class="text-2xl font-bold">Julfan Kursus Online</h1>
+      </div>
+      <div class="hidden sm:flex items-center space-x-4">
+  <a href="index.html" class="hover:underline">Beranda</a>
+  <div class="relative group">
+  <div class="absolute hidden group-hover:block bg-white text-black mt-2 rounded shadow-lg z-50 p-4 space-y-2 min-w-[200px]">
+    <p class="font-semibold">Pilih Kelas:</p>
+    <a href="#kelas-pagi" class="block hover:underline">Kelas Pagi</a>
+    <a href="#kelas-malam" class="block hover:underline">Kelas Malam</a>
+    <hr>
+    <p class="font-semibold">Pengajar:</p>
+    <a href="#guru1" class="block hover:underline">Bu Sari</a>
+    <a href="#guru2" class="block hover:underline">Pak Dedi</a>
+    <hr>
+    <a href="#bayar" class="block bg-blue-700 text-white text-center px-3 py-1 rounded hover:bg-blue-800">Bayar Sekarang</a>
+  </div>
+</div>
+  <button class="hover:underline">Kursus</button>
+  <div class="absolute hidden group-hover:block bg-white text-black mt-2 rounded shadow-lg z-50 p-4 space-y-2 min-w-[200px]">
+    <p class="font-semibold">Pilih Kelas:</p>
+    <a href="#kelas-pagi" class="block hover:underline">Kelas Pagi</a>
+    <section id="kelas-pagi" class="py-12 bg-gray-100 text-center">
+  <h2 class="text-2xl font-bold mb-4">Kelas Pagi</h2>
+  <p>Jam: 08.00 - 10.00 WIB | Senin - Jumat</p>
+</section>
+    <a href="#kelas-malam" class="block hover:underline">Kelas Malam</a>
+    <section id="kelas-malam" class="py-12 bg-gray-100 text-center">
+  <h2 class="text-2xl font-bold mb-4">Kelas Malam</h2>
+  <p>Jam: 19.00 - 21.00 WIB | Senin - Jumat</p>
+</section>
+    <hr>
+    <p class="font-semibold">Pengajar:</p>
+    <a href="#guru1" class="block hover:underline">Bu Sari</a>
+    <section id="guru1" class="py-12 bg-white text-center">
+  <h2 class="text-2xl font-bold mb-4">Pengajar: Bu Sari</h2>
+  <p>Spesialis Bahasa Inggris & Public Speaking</p>
+</section>
+    <a href="#guru2" class="block hover:underline">Pak Dedi</a>
+    <section id="guru2" class="py-12 bg-white text-center">
+  <h2 class="text-2xl font-bold mb-4">Pengajar: Pak Dedi</h2>
+  <p>Spesialis Bahasa Jepang & TOEFL</p>
+</section>
+    <hr>
+    <a href="#bayar" class="block bg-blue-700 text-white text-center px-3 py-1 rounded hover:bg-blue-800">Bayar Sekarang</a>
+    <section id="bayar" class="py-12 bg-blue-50 text-center">
+  <h2 class="text-2xl font-bold mb-4">Bayar Sekarang</h2>
+  <a href="#daftar" class="bg-blue-700 text-white px-6 py-3 rounded hover:bg-blue-800 transition">Lanjut ke Pendaftaran</a>
+</section>
+  </div>
+</div>
+</div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-16 text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-4xl font-bold mb-4">Kembangkan Skillmu Bersama Kami</h2>
+      <p class="mb-6 text-lg">Akses kursus berkualitas dari pengajar profesional. Mulai perjalanan belajarmu hari ini!</p>
+    </div>
+  </section>
+
+  <!-- Jenis Kursus -->
+  <<section id="sectionKursus" class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-semibold text-center mb-10">Jenis-Jenis Kursus</h3>
+      <div class="mb-6 text-center">
+  <input type="text" id="searchKursus" placeholder="Cari nama kursus..." class="w-full sm:w-1/2 p-3 rounded border border-gray-300" oninput="filterKursus()">
+</div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+<!-- TEMPLATE KURSUS -->
+<!-- Format: from-[warna]-50 to-[warna]-100, text-[warna]-700, strong:text-[warna]-600 -->
+<!-- Tambahkan semua kursus di sini -->
+
+<!-- Bahasa Inggris -->
+<div class="bg-gradient-to-br from-white to-red-100 p-6 rounded-xl shadow hover:shadow-xl transition-transform transform hover:-translate-y-1 group cursor-pointer"
+     onclick="tampilkanDetail('jepang'); pilihKursus('')"
+     data-kode="inggris">
+  <div class="w-28 h-28 mx-auto mb-4 flex items-center justify-center bg-white rounded">
+    <img src="logo-inggris.png" alt="Bahasa Inggris" class="w-full h-full object-contain" onerror="this.style.display='none'">
+  </div>
+  <h4 class="text-xl font-semibold text-blue-700 mb-2 group-hover:underline">Bahasa Inggris</h4>
+  <p class="text-sm text-gray-700 mb-3 group-hover:text-gray-900">Latihan speaking, listening dan grammar dengan native speaker.</p>
+  <ul class="text-sm text-gray-700 space-y-1">
+    <li>💰 <strong class="text-blue-600">Harga:</strong> Rp 500.000</li>
+    <li>⏳ <strong>Waktu:</strong> 6 Minggu</li>
+    <li>📍 <strong>Lokasi:</strong> Online / Zoom</li>
+  </ul>
+</div>
+
+<!-- Bahasa Jepang -->
+<div class="bg-gradient-to-br from-white to-red-100 p-6 rounded-xl shadow hover:shadow-xl transition-transform transform hover:-translate-y-1 group cursor-pointer"
+     onclick="tampilkanDetail('jepang')">
+  <div class="w-28 h-28 mx-auto mb-4 flex items-center justify-center bg-white rounded">
+    <img src="logo_jepang.png" alt="Bahasa Jepang" class="w-full h-full object-contain" onerror="this.style.display='none'">
+  </div>
+  <h4 class="text-xl font-semibold text-red-700 mb-2 group-hover:underline">Bahasa Jepang</h4>
+  <p class="text-sm text-gray-700 mb-3 group-hover:text-gray-900">Percakapan harian dari dasar hingga mahir bersama native speaker.</p>
+  <ul class="text-sm text-gray-700 space-y-1">
+    <li>💰 <strong class="text-red-600">Harga:</strong> Rp 500.000</li>
+    <li>⏳ <strong>Waktu:</strong> 6 Minggu</li>
+    <li>📍 <strong>Lokasi:</strong> Online / Zoom</li>
+  </ul>
+</div>
+
+<!-- Bahasa Mandarin -->
+<div class="bg-gradient-to-br from-white to-red-100 p-6 rounded-xl shadow hover:shadow-xl transition-transform transform hover:-translate-y-1 group cursor-pointer"
+     onclick="tampilkanDetail('mandarin')"> 
+  <div class="w-28 h-28 mx-auto mb-4 flex items-center justify-center bg-white rounded">
+    <img src="logo-mandarin.png" alt="Bahasa Mandarin" class="w-full h-full object-contain" onerror="this.style.display='none'">
+  </div>
+  <h4 class="text-xl font-semibold text-orange-700 mb-2 group-hover:underline">Bahasa Mandarin</h4>
+  <p class="text-sm text-gray-700 mb-3 group-hover:text-gray-900">Belajar bicara, baca dan tulis Mandarin dengan metode interaktif.</p>
+  <ul class="text-sm text-gray-700 space-y-1">
+    <li>💰 <strong class="text-orange-600">Harga:</strong> Rp 550.000</li>
+    <li>⏳ <strong>Waktu:</strong> 6 Minggu</li>
+    <li>📍 <strong>Lokasi:</strong> Online / Zoom</li>
+  </ul>
+</div>
+
+<!-- Bahasa Korea -->
+<div class="bg-gradient-to-br from-white to-red-100 p-6 rounded-xl shadow hover:shadow-xl transition-transform transform hover:-translate-y-1 group cursor-pointer"
+     onclick="tampilkanDetail('korea')">
+  <div class="w-28 h-28 mx-auto mb-4 flex items-center justify-center bg-white rounded">
+    <img src="logo-korea.png" alt="Bahasa Korea" class="w-full h-full object-contain" onerror="this.style.display='none'">
+  </div>
+  <h4 class="text-xl font-semibold text-pink-700 mb-2 group-hover:underline">Bahasa Korea</h4>
+  <p class="text-sm text-gray-700 mb-3 group-hover:text-gray-900">Pelajari Hangeul, budaya dan percakapan sehari-hari.</p>
+  <ul class="text-sm text-gray-700 space-y-1">
+    <li>💰 <strong class="text-pink-600">Harga:</strong> Rp 520.000</li>
+    <li>⏳ <strong>Waktu:</strong> 6 Minggu</li>
+    <li>📍 <strong>Lokasi:</strong> Online / Zoom</li>
+  </ul>
+</div>
+
+<!-- Bahasa Indonesia -->
+<div class="bg-gradient-to-br from-yellow-50 to-white p-6 rounded-xl shadow hover:shadow-xl transition-transform transform hover:-translate-y-1 group">
+  <div class="w-28 h-28 mx-auto mb-4 flex items-center justify-center bg-white rounded">
+    <img src="logo-indonesia.png" alt="Bahasa Indonesia" class="w-full h-full object-contain" onerror="this.style.display='none'">
+  </div>
+  <h4 class="text-xl font-semibold text-yellow-700 mb-2 group-hover:underline">Bahasa Indonesia</h4>
+  <p class="text-sm text-gray-700 mb-3 group-hover:text-gray-900">Kursus untuk ekspatriat dan turis yang ingin fasih Bahasa Indonesia.</p>
+  <ul class="text-sm text-gray-700 space-y-1">
+    <li>💰 <strong class="text-yellow-600">Harga:</strong> Rp 400.000</li>
+    <li>⏳ <strong>Waktu:</strong> 5 Minggu</li>
+    <li>📍 <strong>Lokasi:</strong> Online / Zoom</li>
+  </ul>
+</div>
+
+<!-- Bahasa Spanyol -->
+<div class="bg-gradient-to-br from-orange-50 to-yellow-200 p-6 rounded-xl shadow hover:shadow-xl transition-transform transform hover:-translate-y-1 group">
+  <div class="w-28 h-28 mx-auto mb-4 flex items-center justify-center bg-white rounded">
+    <img src="logo-spanyol.png" alt="Bahasa Spanyol" class="w-full h-full object-contain" onerror="this.style.display='none'">
+  </div>
+  <h4 class="text-xl font-semibold text-orange-700 mb-2 group-hover:underline">Bahasa Spanyol</h4>
+  <p class="text-sm text-gray-700 mb-3 group-hover:text-gray-900">Kuasai percakapan praktis dan tata bahasa Spanyol secara mudah.</p>
+  <ul class="text-sm text-gray-700 space-y-1">
+    <li>💰 <strong class="text-orange-600">Harga:</strong> Rp 500.000</li>
+    <li>⏳ <strong>Waktu:</strong> 6 Minggu</li>
+    <li>📍 <strong>Lokasi:</strong> Online / Zoom</li>
+  </ul>
+</div>
+
+<!-- Bahasa Prancis -->
+<div class="bg-gradient-to-br from-indigo-50 to-purple-100 p-6 rounded-xl shadow hover:shadow-xl transition-transform transform hover:-translate-y-1 group">
+  <div class="w-28 h-28 mx-auto mb-4 flex items-center justify-center bg-white rounded">
+    <img src="logo-prancis.png" alt="Bahasa Prancis" class="w-full h-full object-contain" onerror="this.style.display='none'">
+  </div>
+  <h4 class="text-xl font-semibold text-indigo-700 mb-2 group-hover:underline">Bahasa Prancis</h4>
+  <p class="text-sm text-gray-700 mb-3 group-hover:text-gray-900">Mulai dari pengucapan, kosakata, hingga percakapan sehari-hari.</p>
+  <ul class="text-sm text-gray-700 space-y-1">
+    <li>💰 <strong class="text-indigo-600">Harga:</strong> Rp 550.000</li>
+    <li>⏳ <strong>Waktu:</strong> 6 Minggu</li>
+    <li>📍 <strong>Lokasi:</strong> Online / Zoom</li>
+  </ul>
+</div>
+
+<!-- Kursus Komputer -->
+div class="bg-gradient-to-br from-white to-red-100 p-6 rounded-xl shadow hover:shadow-xl transition-transform transform hover:-translate-y-1 group cursor-pointer"
+     onclick="tampilkanDetail('komputer')">
+  <div class="w-28 h-28 mx-auto mb-4 flex items-center justify-center bg-white rounded">
+    <img src="logo-komputer.png" alt="Kursus Komputer" class="w-full h-full object-contain" onerror="this.style.display='none'">
+  </div>
+  <h4 class="text-xl font-semibold text-blue-700 mb-2 group-hover:underline">Kursus Komputer</h4>
+  <p class="text-sm text-gray-700 mb-3 group-hover:text-gray-900">Kuasi Office, internet, dan komputer dasar untuk keperluan kerja.</p>
+  <ul class="text-sm text-gray-700 space-y-1">
+    <li>💰 <strong class="text-blue-600">Harga:</strong> Rp 450.000</li>
+    <li>⏳ <strong>Waktu:</strong> 5 Minggu</li>
+    <li>📍 <strong>Lokasi:</strong> Offline / Lab Komputer</li>
+  </ul>
+</div>
+
+<!-- Kursus Memasak -->
+<div class="bg-gradient-to-br from-amber-50 to-yellow-100 p-6 rounded-xl shadow hover:shadow-xl transition-transform transform hover:-translate-y-1 group">
+  <div class="w-28 h-28 mx-auto mb-4 flex items-center justify-center bg-white rounded">
+    <img src="logo-masak.png" alt="Kursus Memasak" class="w-full h-full object-contain" onerror="this.style.display='none'">
+  </div>
+  <h4 class="text-xl font-semibold text-yellow-700 mb-2 group-hover:underline">Kursus Memasak</h4>
+  <p class="text-sm text-gray-700 mb-3 group-hover:text-gray-900">Latihan masak lokal & internasional bersama chef profesional.</p>
+  <ul class="text-sm text-gray-700 space-y-1">
+    <li>💰 <strong class="text-yellow-600">Harga:</strong> Rp 600.000</li>
+    <li>⏳ <strong>Waktu:</strong> 4 Minggu</li>
+    <li>📍 <strong>Lokasi:</strong> Offline / Dapur Pelatihan</li>
+  </ul>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Formulir Pendaftaran -->
+ <section id="pilihKursus" class="py-16 bg-gray-50 text-center">
+  <div class="max-w-xl mx-auto px-4">
+    <h3 class="text-2xl font-semibold mb-4">Pilih Kursus Kamu</h3>
+    <select id="dropdownKursus" onchange="tampilkanHarga()" class="w-full p-3 rounded border border-gray-300 mb-4">
+      <option value="">-- Pilih Kursus --</option>
+      <option value="inggris">Bahasa Inggris</option>
+      <option value="jepang">Bahasa Jepang</option>
+      <option value="mandarin">Bahasa Mandarin</option>
+      <option value="korea">Bahasa Korea</option>
+      <option value="indonesia">Bahasa Indonesia</option>
+      <option value="spanyol">Bahasa Spanyol</option>
+      <option value="prancis">Bahasa Prancis</option>
+      <option value="komputer">Kursus Komputer</option>
+      <option value="memasak">Kursus Memasak</option>
+    </select>
+
+    <div id="infoHarga" class="text-lg font-semibold text-gray-700 hidden mb-4"></div>
+
+    <button id="btnBayar" onclick="window.location.href='#bayar'" class="bg-blue-700 text-white px-6 py-2 rounded hover:bg-blue-800 transition hidden">
+      Bayar Sekarang
+    </button>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-blue-700 text-white text-center py-6">
+  <p>&copy; 2025 Julfan Kursus Online. Semua Hak Dilindungi.</p>
+</footer>
+
+  <script>
+  function filterKursus() {
+    const input = document.getElementById("searchKursus").value.toLowerCase();
+    const cards = document.querySelectorAll(".grid > div");
+    cards.forEach(card => {
+      const title = card.querySelector("h4").textContent.toLowerCase();
+      if (title.includes(input)) {
+        card.classList.remove("hidden");
+      } else {
+        card.classList.add("hidden");
+      }
+    });
+  }
+
+</script>
+<script>
+  function toggleLoginForm() {
+    const modal = document.getElementById("loginModal");
+    modal.classList.toggle("hidden");
+  }
+
+  function filterKursus() {
+    const input = document.getElementById("searchKursus").value.toLowerCase();
+    const cards = document.querySelectorAll(".grid > div");
+    cards.forEach(card => {
+      const title = card.querySelector("h4").textContent.toLowerCase();
+      if (title.includes(input)) {
+        card.classList.remove("hidden");
+      } else {
+        card.classList.add("hidden");
+      }
+    });
+  }
+
+</script>
+<!-- Tambahkan ini di akhir HTML sebelum </body> -->
+<script>
+// Data kursus, pengajar, dan pembayaran
+<script>
+const kursusData = {
+  inggris: {
+    nama: "Bahasa Inggris",
+    kelas: ["Pagi", "Malam"],
+    pengajar: ["Bu Sari", "Pak Indra"],
+    pembayaran: ["Transfer Bank", "QRIS", "E-Wallet"]
+  },
+  jepang: {
+    nama: "Bahasa Jepang",
+    kelas: ["Pagi", "Malam"],
+    pengajar: ["Pak Dedi", "Bu Kana"],
+    pembayaran: ["Transfer Bank", "QRIS"]
+  },
+  mandarin: {
+    nama: "Bahasa Mandarin",
+    kelas: ["Pagi"],
+    pengajar: ["Bu Mei"],
+    pembayaran: ["E-Wallet", "Transfer Bank"]
+  },
+  korea: {
+    nama: "Bahasa Korea",
+    kelas: ["Malam"],
+    pengajar: ["Pak Kim"],
+    pembayaran: ["QRIS", "E-Wallet"]
+  },
+  indonesia: {
+    nama: "Bahasa Indonesia",
+    kelas: ["Pagi"],
+    pengajar: ["Bu Nia"],
+    pembayaran: ["Transfer Bank"]
+  },
+  spanyol: {
+    nama: "Bahasa Spanyol",
+    kelas: ["Malam"],
+    pengajar: ["Bu Rosa"],
+    pembayaran: ["QRIS", "Transfer Bank"]
+  },
+  prancis: {
+    nama: "Bahasa Prancis",
+    kelas: ["Pagi", "Malam"],
+    pengajar: ["Pak Louis"],
+    pembayaran: ["Transfer Bank", "QRIS"]
+  },
+  komputer: {
+    nama: "Kursus Komputer",
+    kelas: ["Pagi"],
+    pengajar: ["Pak Rudi"],
+    pembayaran: ["Transfer Bank"]
+  },
+  memasak: {
+    nama: "Kursus Memasak",
+    kelas: ["Malam"],
+    pengajar: ["Chef Wayan"],
+    pembayaran: ["QRIS"]
+  }
+};
+</script>
+    <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" id="modalDetail">
+      <div class="bg-white rounded-lg p-6 shadow-lg w-full max-w-md relative">
+        <button onclick="tutupDetail()" class="absolute top-2 right-2 text-gray-500 hover:text-red-600 text-2xl">&times;</button>
+        <h3 class="text-xl font-bold mb-4">${data.nama}</h3>
+        <p class="mb-2"><strong>Kelas:</strong> ${data.kelas.join(", ")}</p>
+        <p class="mb-2"><strong>Pengajar:</strong> ${data.pengajar.join(", ")}</p>
+        <p class="mb-4"><strong>Metode Pembayaran:</strong> ${data.pembayaran.join(", ")}</p>
+        <button onclick="tutupDetail()" class="mt-2 bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800">Tutup</button>
+      </div>
+    </div>
+
+</script>
+<!-- Tambahkan ini di akhir HTML sebelum </body> -->
+<script>
+// Data kursus, pengajar, dan pembayaran
+const kursusData = {
+  inggris: {
+    nama: "Bahasa Inggris",
+    kelas: ["Pagi", "Malam"],
+    pengajar: ["Bu Sari", "Pak Indra"],
+    pembayaran: ["Transfer Bank", "QRIS", "E-Wallet"]
+  },
+  jepang: {
+    nama: "Bahasa Jepang",
+    kelas: ["Pagi", "Malam"],
+    pengajar: ["Pak Dedi", "Bu Kana"],
+    pembayaran: ["Transfer Bank", "QRIS"]
+  },
+  mandarin: {
+    nama: "Bahasa Mandarin",
+    kelas: ["Pagi", "Malam"],
+    pengajar: ["Bu Mei", "BU rani"],
+    pembayaran: ["E-Wallet", "Transfer Bank"]
+  },
+  korea: {
+    nama: "korea",
+    kelas: ["Malam"],
+    pengajar: ["Pak Kim"],
+    pembayaran: ["E-Wallet", "Transfer Bank"]
+  },
+  komputer: {
+    nama: "komputer",
+    kelas: ["Malam","Pagi"],
+    pengajar: ["Pak Kim","miss mariska"],
+    pembayaran: ["E-Wallet", "Transfer Bank"]
+  },
+  // tambahkan kursus lainnya jika perlu
+};
+
+// Buat modal tampilkan detail kursus
+function tampilkanDetail(kode) {
+  const data = kursusData[kode];
+  if (!data) return alert("Kursus tidak ditemukan");
+
+  // Tutup modal lama jika masih ada
+  const modalLama = document.getElementById("modalDetail");
+  if (modalLama) modalLama.remove();
+
+  const detailHTML = `
+    <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" id="modalDetail">
+      <div class="bg-white rounded-lg p-6 shadow-lg w-full max-w-md relative">
+        <button onclick="tutupDetail()" class="absolute top-2 right-2 text-gray-500 hover:text-red-600 text-2xl">&times;</button>
+        <h3 class="text-xl font-bold mb-4">${data.nama}</h3>
+        <p class="mb-2"><strong>Kelas:</strong> ${data.kelas.join(", ")}</p>
+        <p class="mb-2"><strong>Pengajar:</strong> ${data.pengajar.join(", ")}</p>
+        <p class="mb-4"><strong>Metode Pembayaran:</strong> ${data.pembayaran.join(", ")}</p>
+        <button onclick="tutupDetail()" class="mt-2 bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800">Tutup</button>
+      </div>
+    </div>
+  `;
+
+  document.body.insertAdjacentHTML("beforeend", detailHTML);
+}
+
+function tutupDetail() {
+  const modal = document.getElementById("modalDetail");
+  if (modal) modal.remove();
+}
+</script>
+<script>
+  function tampilkanHarga() {
+    const select = document.getElementById("dropdownKursus");
+    const hargaInfo = document.getElementById("infoHarga");
+    const btnBayar = document.getElementById("btnBayar");
+    const kode = select.value;
+
+    if (!kode) {
+      hargaInfo.classList.add("hidden");
+      btnBayar.classList.add("hidden");
+      return;
+    }
+
+    const data = kursusData[kode];
+    if (!data) return;
+
+    let harga = "Rp -";
+
+    // Tentukan harga berdasarkan data
+    switch (kode) {
+      case "inggris":
+      case "jepang":
+      case "spanyol":
+        harga = "Rp 500.000"; break;
+      case "mandarin":
+      case "prancis":
+        harga = "Rp 550.000"; break;
+      case "korea":
+        harga = "Rp 520.000"; break;
+      case "indonesia":
+        harga = "Rp 400.000"; break;
+      case "komputer":
+        harga = "Rp 450.000"; break;
+      case "memasak":
+        harga = "Rp 600.000"; break;
+    }
+
+    hargaInfo.textContent = `Harga Kursus: ${harga}`;
+    hargaInfo.classList.remove("hidden");
+    btnBayar.classList.remove("hidden");
+  }
+</script>
+<script>
+  function tampilkanHarga() {
+    ...
+  }
+</script>
+<script>
+function tampilkanHarga() {
+    const select = document.getElementById("dropdownKursus");
+    const kode = select.value;
+
+    if (!kode) return;
+
+    // Redirect otomatis ke pembayaran.html dengan parameter kursus
+    window.location.href = `pembayaran.html?kursus=${kode}`;
+}
+</script>
+<script>
+function tampilkanHarga() {
+    const select = document.getElementById("dropdownKursus");
+    const kode = select.value;
+    if (!kode) return;
+    window.location.href = `pilih_kelas.html?kursus=${kode}`;
+}
+</script>
+
+</body>
+</html>
