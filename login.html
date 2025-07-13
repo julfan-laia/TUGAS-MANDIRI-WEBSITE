@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>julfanKursus Online - Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 flex flex-col min-h-screen">
+
+  <!-- Header dengan gambar dan judul -->
+  <div class="relative bg-blue-700 flex flex-col items-center justify-center p-8">
+    <h1 class="text-white text-3xl font-bold mb-4 text-center">julfanKursus Online</h1>
+    <img src="beranda.png" alt="Belajar Online" class="w-80 rounded shadow-lg border-4 border-white">
+  </div>
+
+  <!-- Form Login -->
+  <div class="flex-grow flex items-center justify-center p-4 bg-gray-100">
+    <div class="bg-white p-6 rounded-xl shadow-lg w-full max-w-sm">
+      <h2 class="text-center text-2xl font-semibold mb-4 text-blue-700">Login ke julfanKursus</h2>
+  <form action="cek_login.php" method="POST" class="space-y-4">
+
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Email atau Username</label>
+          <input type="text" id="email" name="email" required class="mt-1 w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+          <label for="password" class="block text-sm font-medium text-gray-700">Kata Sandi</label>
+          <input type="password" id="password" name="password" required class="mt-1 w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <button type="submit" class="w-full bg-blue-700 text-white py-2 rounded hover:bg-blue-800 transition">Login</button>
+      </form>
+      <d<div class="flex justify-between text-sm text-blue-700 mt-4">
+    <a href="#" class="hover:underline">Lupa Password?</a>
+    <a href="daftar.html" class="hover:underline">Daftar Akun</a>
+</div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center text-white py-4 bg-blue-700">
+    &copy; 2025 julfanKursus Online
+  </footer>
+
+</body>
+</html>
