@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pembayaran Kursus</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 flex items-center justify-center min-h-screen">
+
+  <div class="bg-white p-6 rounded shadow-md w-full max-w-md text-center">
+    <h1 class="text-2xl font-bold mb-4">Pembayaran Kursus</h1>
+    <p id="namaKursus" class="mb-2 text-lg font-semibold"></p>
+    <p id="hargaKursus" class="mb-4 text-lg"></p>
+
+    <div class="mb-4">
+      <label for="rekening" class="block mb-1 text-left font-semibold">Nomor Rekening Tujuan:</label>
+      <input id="rekening" type="text" readonly class="w-full p-2 border rounded bg-gray-100 text-center font-mono">
+    </div>
+
+    <button class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 transition" onclick="konfirmasiPembayaran()">Konfirmasi Pembayaran</button>
+  </div>
+
+<script>
+const kursusHarga = {
+    inggris: { nama: "Bahasa Inggris", harga: "Rp 500.000", rekening: "1234567890 (BCA)" },
+    jepang: { nama: "Bahasa Jepang", harga: "Rp 500.000", rekening: "9876543210 (Mandiri)" },
+    mandarin: { nama: "Bahasa Mandarin", harga: "Rp 550.000", rekening: "5554443332 (BRI)" },
+    korea: { nama: "Bahasa Korea", harga: "Rp 520.000", rekening: "1122334455 (BNI)" },
+    indonesia: { nama: "Bahasa Indonesia", harga: "Rp 400.000", rekening: "6677889900 (BCA)" },
+    spanyol: { nama: "Bahasa Spanyol", harga: "Rp 500.000", rekening: "4433221100 (Mandiri)" },
+    prancis: { nama: "Bahasa Prancis", harga: "Rp 550.000", rekening: "1234432112 (BRI)" },
+    komputer: { nama: "Kursus Komputer", harga: "Rp 450.000", rekening: "9988776655 (BNI)" },
+    memasak: { nama: "Kursus Memasak", harga: "Rp 600.000", rekening: "5544332211 (BCA)" }
+};
+
+window.onload = function() {
+    const params = new URLSearchParams(window.location.search);
+    const kursus = params.get("kursus");
+
+    if (kursus && kursusHarga[kursus]) {
+        document.getElementById("namaKursus").textContent = "Kursus: " + kursusHarga[kursus].nama;
+        document.getElementById("hargaKursus").textContent = "Harga: " + kursusHarga[kursus].harga;
+        document.getElementById("rekening").value = kursusHarga[kursus].rekening;
+    } else {
+        document.getElementById("namaKursus").textContent = "Kursus tidak ditemukan.";
+    }
+};
+
+function konfirmasiPembayaran() {
+    alert("Terima kasih, pembayaran Anda akan segera kami proses!");
+}
+</script>
+
+</body>
+</html>
